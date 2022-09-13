@@ -92,8 +92,11 @@ const traingles = [
 
 const area = traingles.map(({base, height}) => {
     // modify and return element 
-    return 1/ 2 * base * height;
+    return 1 / 2 * base * height;
 });
 console.log(area);
+
+
+
 
 

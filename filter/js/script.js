@@ -107,7 +107,11 @@
 //isMultiPlayer === true && rating => 8
 //______
 
-//condition way
+// the turn operator way , gets the same output 
 
-// (isMultiplayer, rating) && (rating >= 8 ? true : false)
+// const filterGames = games.filter(({isMultiplayer, rating}) => {
+//     return (isMultiplayer === true) && (rating >= 8) ? true : false:
+// }
+
+
 //_________________________

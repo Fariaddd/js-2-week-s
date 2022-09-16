@@ -90,3 +90,8 @@ for (const theKey in user){
  //["name", "age"]
 
  console.log(userProfileKeys);
+
+
+  // object.keys()
+ // object.values()
+

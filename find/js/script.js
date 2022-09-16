@@ -33,7 +33,7 @@ const newArray = temperatures.find((currentOne) => {
 })
 
 console.log(newArray);
-//________
+//_______________________
 
 
 const profiles = [
@@ -66,7 +66,7 @@ const foundProfile = profiles.find((profile) => {
 
 console.log(foundProfile);
 
-// example
+// example _________________
 
 const books = [
     { title: 'Building a Spaceship', inStock: false },

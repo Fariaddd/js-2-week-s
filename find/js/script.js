@@ -7,17 +7,19 @@
 
   // find the element the value of 5
 
-const values = [1, 2, 4, 5, 6, 7, 88, 100, 3];
+// const values = [1, 2, 4, 5, 6, 7, 88, 100, 3];
 
-const foundValue = values.find((currentValue) =>{
-    // condition
-    if(currentValue === 5 ){
-        return true;
-    }
+// const foundValue = values.find((currentValue) =>{
+//     // condition
+//     if(currentValue === 5 ){
+//         return true;
+//     }
 
-});
+// });
 
-console.log(foundValue);
+// console.log(foundValue);
+//________
+
 
 // example 2 
 
@@ -79,13 +81,13 @@ const foundBooks = books.find((book) => {
         return true;
     }
 });
-
+console.log("First book in stock", foundBooks.title);
 // "foundBooks" will be undefined there are no books
 // 
 
 //console.log(foundBooks);
-if(foundBooks === undefined){
-    console.log("no books in stock!");
-} else {
-    console.log("First book in stock", foundBooks.title);
-}
+// if(foundBooks === undefined){
+//     console.log("no books in stock!");
+// } else {
+//     console.log("First book in stock", foundBooks.title);
+// }

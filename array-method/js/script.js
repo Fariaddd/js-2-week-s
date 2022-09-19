@@ -17,8 +17,8 @@
 
 // const newValues = values.map(function(element, index, array){
 //     // modify and return element
-//     return array, elemnt or index
-// });
+//     // return array, elemnt or index
+// });  
 
 // console.log(newValues);
 

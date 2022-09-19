@@ -20,32 +20,27 @@
 
 // const filteredNumbers = numbers.filter((number) => number >= 4);
 // console.log(filteredNumbers);
-//______
-
-// write a function which filters for me the values which is greater than or equal 100
+//_______________________
 
 
-// function filtergreaterEqual100(arr){
-//     const filterredValues = arr.filter((item) => {
-//         if(item >= 100){
-//             return true
-//         } else {
-//             return false
-//         }
-//     })
-//     return filterredValues
-// }
+const values = [0, 23, 55, 66, 777, 100, 500, 250];
+// write a function which filters for me the valeus which is greater than or equal 100
+// please use the filter method
 
-// const myfilteredValues = filtergreaterEqual100(values);
+function filtergreaterEqual100(arr) {
+    const filteredValues = arr.filter((item) => item >= 100)
+    return filteredValues;
+}
 
-// console.log(filterredValues);
+const myFilteredValues = filtergreaterEqual100(values);
 
+console.log(myFilteredValues);
 
-// const values = [0, 23, 55, 66, 777, 100, 500, 250]
+//_____  refactor
 
-// const filteredNumbers = values.filter((value) => value >= 100);
+const filteredNumbers = values.filter((value) => value >= 100);
 
-// console.log(filteredNumbers);
+console.log(filteredNumbers);
 //___________
 
 // example 3

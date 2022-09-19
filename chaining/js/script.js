@@ -1,87 +1,87 @@
 // // chaining
-const products = [
+// const products = [
   
-    // Here we create an object and each
-    // object has a name and a price
-    { name: 'dress', price: 600 },
-    { name: 'cream', price: 60 },
-    { name: 'book', price: 200 },
-    { name: 'bottle', price: 50 },
-    { name: 'bedsheet', price: 350 }
-];
+//     // Here we create an object and each
+//     // object has a name and a price
+//     { name: 'dress', price: 600 },
+//     { name: 'cream', price: 60 },
+//     { name: 'book', price: 200 },
+//     { name: 'bottle', price: 50 },
+//     { name: 'bedsheet', price: 350 }
+// ];
 
-// //1. filter thoese elements whose price are  greater than 100 using filter() method
-// //2. Map on those elements to a new array with the new sale price (50%) of
+// // //1. filter thoese elements whose price are  greater than 100 using filter() method
+// // //2. Map on those elements to a new array with the new sale price (50%) of
 
-// const filteredProducts = products.filter((product)=>{
+// // const filteredProducts = products.filter((product)=>{
+// //     if(product.price > 100){
+// //         return true;
+
+// //     }
+// // });
+// // console.log(filteredProducts);
+
+// // //2. Map on those elements to a new array with the new sale price (50%) of
+
+// // const productsOnSale = filteredProducts.map((product) =>{
+// //     return `the ${product.name} new price is now ${product.price / 2}  NOK `
+// // });
+// // console.log(`productsOnSale`, productsOnSale);
+
+// // // // chaining way
+// const productsOnSales = products.filter((product) =>{
 //     if(product.price > 100){
-//         return true;
-
+//         return true
 //     }
-// });
-// console.log(filteredProducts);
 
-// //2. Map on those elements to a new array with the new sale price (50%) of
-
-// const productsOnSale = filteredProducts.map((product) =>{
+// }).map((product) =>{
 //     return `the ${product.name} new price is now ${product.price / 2}  NOK `
 // });
-// console.log(`productsOnSale`, productsOnSale);
 
-// // // chaining way
-const productsOnSales = products.filter((product) =>{
-    if(product.price > 100){
-        return true
-    }
-
-}).map((product) =>{
-    return `the ${product.name} new price is now ${product.price / 2}  NOK `
-});
-
-console.log(productsOnSales);
+// console.log(productsOnSales);
                               
 
-// // //destructe way
-// // // check github reposotory
+// // // //destructe way
+// // // // check github reposotory
 
-const productOnSaleee = products
-                                .filter(({price}) => price > 100)
-                                .map(({name, price}) => {
-                                    return `the ${name} new price is now ${price}`
-                                });
+// const productOnSaleee = products
+//                                 .filter(({price}) => price > 100)
+//                                 .map(({name, price}) => {
+//                                     return `the ${name} new price is now ${price}`
+//                                 });
 
-                                console.log(productOnSaleee);
+//                                 console.log(productOnSaleee);
 
 
 
 
 // // //_________
 
-// const inventoryProducts = [
-//     { name: 'Milk', price: 5.0, inStock: true },
-//     { name: 'Cheese', price: 10.0, inStock: true },
-//     { name: 'Bread', price: 8.0, inStock: false },
-//     { name: 'Beans', price: 3.0, inStock: true },
-//     { name: 'Eggs', price: 12.0, inStock: true },
-//     { name: 'Rice', price: 4.0, inStock: false },
-//     { name: 'Meat', price: 25, inStock: true },
-//     { name: 'Coffee', price: 12.0, inStock: true },
-//     { name: 'Tea', price: 8.0, inStock: false },
-//     { name: 'Bottled Water', price: 4.0, inStock: false },
-// ];
+const inventoryProducts = [
+    { name: 'Milk', price: 5.0, inStock: true },
+    { name: 'Cheese', price: 10.0, inStock: true },
+    { name: 'Bread', price: 8.0, inStock: false },
+    { name: 'Beans', price: 3.0, inStock: true },
+    { name: 'Eggs', price: 12.0, inStock: true },
+    { name: 'Rice', price: 4.0, inStock: false },
+    { name: 'Meat', price: 25, inStock: true },
+    { name: 'Coffee', price: 12.0, inStock: true },
+    { name: 'Tea', price: 8.0, inStock: false },
+    { name: 'Bottled Water', price: 4.0, inStock: false },
+];
 
 
 
 
 // // In this example, we have a list of products that
 // // we want to apply a discount to it for a sale, but only products where:
+
 // // 1. the price is 5 or higher (>= 5)
 // // 2. the products are in stock (inStock === true)
 // // use the map method to calculate a new property called (discountedPrice)
 // // to calculate the discount = price - (discount percentage / 100) * price
 // // discount percentage will be 20
 // // {name: 'Milk', price: 5, inStock: true, discountedPrice: 4}
-
 
 // const inventoryProductsFiltered = inventoryProducts.filter((product) => {
 //     if(product.price >= 5 && (product.inStock === true )){
@@ -100,13 +100,16 @@ const productOnSaleee = products
 // console.log(discountedInventoryProducts);
 
 
-// const discountedInventoryProducts = inventoryProducts.filter(({price, inStock}) => price >= 5 && (inStock === true))
-//                                                       .map((product) => {
-//                                                        product.discountedPrice = product.price * 0.8;
-//                                                        return product;
-//                                                           });
 
-//                                                        console.log("discountedInventoryProducts", discountedInventoryProducts);
+ // refactor in the destructive way { }
+ 
+const discountedInventoryProducts = inventoryProducts.filter(({price, inStock}) => price >= 5 && (inStock === true))
+                                                      .map((product) => {
+                                                       product.discountedPrice = product.price * 0.8;
+                                                       return product;
+                                                          });
+
+                                                       console.log("discountedInventoryProducts", discountedInventoryProducts);
 
 
 

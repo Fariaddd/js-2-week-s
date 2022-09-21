@@ -128,18 +128,75 @@
 
 
 // Adding these values together should give us a result of 40
-const values = [
-    { nestedValue: 10 },
-    { nestedValue: 10 },
-    { nestedValue: 10 },
-    { nestedValue: 10 },
+// const values = [
+//     { nestedValue: 10 },
+//     { nestedValue: 10 },
+//     { nestedValue: 10 },
+//     { nestedValue: 10 },
+//   ];
+  
+//   const sumOfValues = values.reduce((total, currentObject) => {
+//     // Add the 'nestedValue' property from the current object in the array
+//     total += currentObject.nestedValue;
+//     return total;
+//   });
+  
+//   // We do not get our expected answer of 40
+//   console.log(sumOfValues);
+
+const items = [
+    {
+      name: 'Apple',
+      itemsInStock: 10,
+      price: 5.99,
+    },
+    {
+      name: 'Banana',
+      itemsInStock: 5,
+      price: 3.99,
+    },
+    {
+      name: 'Orange',
+      itemsInStock: 2,
+      price: 3.99,
+    },
   ];
   
-  const sumOfValues = values.reduce((total, currentObject) => {
-    // Add the 'nestedValue' property from the current object in the array
-    total += currentObject.nestedValue;
-    return total;
-  });
+
+  // 7.98 +19.95 +
+
+  const totalCostOfItems = items.reduce((totalCost, item) => {
+    totalCost += item.itemsInStock * item.price;
+    return totalCost;
+  }, 0);
   
-  // We do not get our expected answer of 40
-  console.log(sumOfValues);
+  // You could destructure the properties from 'item'. This can
+  // arguably become more readable.
+  const totalCostOfItemsDestructured = items.reduce(
+    (totalCost, { itemsInStock, price }) => {
+      totalCost += itemsInStock * price;
+      return totalCost;
+    },
+    0,
+  );
+  
+  console.log(totalCostOfItems);
+
+//   // Numbers that we will loop through
+// const values = [100, 200, 300, 400, 500];
+
+// const sum = values.reduce(
+//   (total, value, index, array) => {
+//     // 0 = 1 +  100 
+//     // total is 101
+    
+//     // 101 + 200
+//     // 301
+
+
+// total = total + value;
+
+//     return total;
+//   },
+//   10);
+//   console.log(sum);
